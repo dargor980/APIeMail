@@ -36,11 +36,9 @@ namespace Api_email
             NetworkCredential credenciales = new NetworkCredential(usuario, contraseña);
             servidor.Credentials = credenciales;
             servidor.EnableSsl = true;
-
-            
-                servidor.Send(correo);
-                Console.WriteLine("\t\tCorreo enviado de manera exitosa");
-                correo.Dispose();
+            servidor.Send(correo);
+            Console.WriteLine("\t\tCorreo enviado de manera exitosa");
+            correo.Dispose();
            
 
         }
